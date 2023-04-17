@@ -1,0 +1,6 @@
+Q. What is the difference between git restore filename and git restore --staged filename?
+<filename>
+The name of a file (or multiple files) you want to restore. Naming the file you want to restore can be as simple as providing the filename / path to a single file. But you can also provide multiple filenames (delimited by spaces) or even a wildcard pattern (e.g. *.html). Another option is to provide the . character, thereby restoring all files in the current directory.
+
+--staged
+Removes the file from the Staging Area, but leaves its actual modifications untouched. By default, the git restore command will discard any local, uncommitted changes in the corresponding files and thereby restore their last committed state. With the --staged option, however, the file will only be removed from the Staging Area - but its actual modifications will remain untouched.
