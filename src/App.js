@@ -25,26 +25,33 @@ function App() {
   function AlerUserFive () {
     alert( 'Product of is' + productDetails[4].productId + ', which is Shoes of brand '+ productDetails[5].Brand + 'has of rupees'+ productDetails[4].Price + 'is added in the cart , please proceed to pay !!! '
     )
-  }<>
-  {productDetails.map((val,index)=>{
-    return (
-      <div className="App" key={val.productId} >
-     
-    
-      <ProductCard key={val.productId}
-      productId={val.productId}
-      productDetails={val.productDescription}
-      productName={val.productName}
-      Brand={val.Brand}
-      Price={val.Price}
-      Rating={val.Rating}
-    />
+  }
+  
    
-      </div>
+    return (
+      <div className="App"  >
       
+     {productDetails.map ( productDetail => {return (
+     
+        <ProductCard
+        key={productDetail.productId}
+         productPic = {productDetail.productPic}
+        productDescription ={productDetail.productDescription}
+        productName ={productDetail.productName}
+        Brand ={productDetail.Brand}
+        Price={productDetail.Price}
+        Rating={productDetail.Rating}
+        />
+     )
+     
+     }
+     )
+    }  
+       </div>  
     );
-  })}
-  </>
+   
+   
+ 
     }
  
 
