@@ -6,13 +6,13 @@ export default function GuessLuckyNumber() {
     const [Count, setCount] = useState(0);
     const [printMessage, setprintMessage] = useState('');
     function handlePrint() {
-        if (Number(randNo) === Number(GuessNumber)) {
+        if (randNo == GuessNumber) {
             setprintMessage("congratulations you guessed the right number in" + " " + Count + " " + "attempts");
         }
-        else if (Number(GuessNumber) < Number(randNo)) {
+        else if (GuessNumber< randNo) {
             setprintMessage("you guessed a smaller number .")
             alert("you guessed a smaller number")
-        } else if(Number(GuessNumber) > Number(randNo)){
+        } else if(GuessNumber > randNo){
             setprintMessage("you guessed a bigger number .")
             alert("you guessed a bigger number");
         }
