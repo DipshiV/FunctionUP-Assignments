@@ -1,0 +1,43 @@
+h1{
+    font-weight: 900;
+    margin-top: 90px;
+    color: green;
+    
+    
+}
+input{
+    padding: 30px;
+    width: 400px;
+    background-color: gold;
+    font-weight: 300;
+    color: black;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+   
+
+}
+button{
+    margin-left: 20px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgb(236, 17, 17);
+    color: white;
+   
+}
+p{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+    
+
+}
+div{
+    background-color: rgb(99, 99, 177);
+   justify-content: center;
+   margin-right:210px ;
+   margin-left: 210px;
+  
+   
+   
+}
