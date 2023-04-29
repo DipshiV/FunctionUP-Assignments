@@ -26,14 +26,11 @@ export default function GuessLuckyNumber() {
     }
     return (
         <Fragment>
-            <h1>Guess The Lucky Number </h1>
+            <h1>Guess The Lucky Number  between 1 to 100</h1>
             <br />
-            <p>{setprintMessage}</p>
-            <input value={GuessNumber} type='text' placeholder="Enter your Lucky Number...." onChange={handleNumber} />
+            <input value={GuessNumber} type='Number' placeholder="Enter your Lucky Number...." onChange={handleNumber} />
             <button onClick={handlePrint}>Match Number</button>
-            <p>Random number:{randNo}</p>
             <div><p>{printMessage}</p>
-
             </div>
         </Fragment>
     )
