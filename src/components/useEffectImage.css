@@ -1,0 +1,24 @@
+.container button{
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: brown;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    align-content: center;
+    justify-content: center;
+    
+}
+img{
+    background-color: blueviolet;
+    box-shadow: 30%;
+    box-sizing: content-box;
+    
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    box-shadow: 50px;
+    margin-top: 40px;
+}
