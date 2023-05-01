@@ -1,0 +1,13 @@
+button{
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    color: blueviolet;
+}
+input{
+    margin-top: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: blue;
+}
