@@ -1,5 +1,47 @@
+/* .App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: rgb(187, 17, 17);
+  box-shadow: #61dafb;
+  box-sizing: 300%;
+  
+} */
 .App {
-  text-align: center;
+ 
+  background-color: #26a69a;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+ 
+  
+
+
+.cards {
+  display: flex;
+  flex: 0 1 24%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .App-logo {
@@ -17,7 +59,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
