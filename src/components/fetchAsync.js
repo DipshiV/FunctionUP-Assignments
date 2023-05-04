@@ -1,21 +1,23 @@
 import { useState,useEffect } from 'react';
+import axios from 'axios';
 export default function Image() {
-  const [image , setImage] = useState('https://images.pexels.com/photos/3177388/pexels-photo-3177388.jpeg?auto=compress&cs=tinysrgb&w=800')
-    useEffect(() => {
+  const [image , setImage] = useState('');
+   
+  useEffect(() => {
         getDog();
   }, []);
+  
+    async function getDog() {
+      try {
+        const response = await axios.get('https://dog.ceo/api/breeds/image/random')
+       console.log(response)
+        setImage(response.data.message)
+      } catch (error) {
+        console.error('Error from API',error);
+      }
+    }
 
-  async function getDog () {
-    try{
-      
-        const response = await fetch('https://dog.ceo/api/breeds/image/random')
-        const data = await response.json()
-        setImage(data.message)
-    }
-    catch(error){
-      console.log('i am from catch' ,error)
-    }
-  }
+  
   return (
     <div className="container">
       <img 
