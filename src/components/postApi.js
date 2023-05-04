@@ -1,28 +1,23 @@
 import {React,Fragment,useState} from 'react';
+import './postApi.css'
 export default function OtpGen(){
-   
-//    // const [formValues, setFormValues] = useState({mobile:''});
-//     const [formErrors, setFormErrors] = useState({});
-   
-   
-//     const validate = (values) => {
-//         const errors = {};
-//     const mobregex= /[6789]\d{9}$/;
-//     if(!values.mobile){
-//         errors.mmobile ="Mobile No is required";
-//     }else if(!mobregex.text(values.mobile)){
-//         errors.mobile="Number should be 10 digit "
-//     } return errors;
-// };
-async function handleOtp(data){
-    try {
-        const data = { "mobile": 7310013161 };
-      console.log(data);
+    const [mobile,setMobile]=useState("");
+    const [error,setError] =useState(false);
+function handleChange(e){
+    let item=e.target.value;
+    if(!/^[789]\d{9}$/.test(item)){
+    setError(true);
+    }else{
+        setError(false);
+    }
+    setMobile(item);
+}
+async function handleOtp(){
+    try {    
+      console.log(mobile);
+      let data={mobile};
     let result= await fetch("https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP",{
         method:'POST',
-        mode: "cors", // no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "same-origin", // include, *same-origin, omit
         headers:{
             "Content-Type":"application/json",
             "Accept": 'application/json' 
@@ -35,17 +30,21 @@ async function handleOtp(data){
         console.error("Error:", error);
 
     }
-   // setFormErrors(validate(formValues));
 }
-    return(
-<Fragment>
-<input  type="Number"
-name="mobileNo"
-placeholder="mobileno" />
+    return(<Fragment>
+<div className='container'>
+<h1>SignUp </h1>
+<div className='form'>Enter your Mobile Number:
+<span><input  type="Number"
+name="mobile"
+placeholder="mobile" onChange={handleChange} value={mobile} /> {error?<p>Invalid number</p>:""}
+</span>
 
-
+<div className='btn'>
 <button onClick={handleOtp}>Get OTP</button>
-
+</div>
+</div>
+</div>
 </Fragment>
     );
 }
