@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app{
+  border: 1px solid rgb(20, 16, 16);
+  width: 70% ;
+  display: flex;
+  margin: auto;
+  padding: 2rem ;
+  max-width: 70%;
+  /* gap: 2rem; */
+  /* overflow: hidden; */
+  height: 40vh;
+  overflow: scroll;
+
+}
+.app::-webkit-scrollbar {
+  display: none;
+}

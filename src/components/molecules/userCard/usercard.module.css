@@ -1,0 +1,41 @@
+.app{
+    border: 1px solid rgb(20, 16, 16);
+    width: 70% ;
+    display: flex;
+    margin: auto;
+    padding: 2rem ;
+    max-width: 70%;
+    /* gap: 2rem; */
+    /* overflow: hidden; */
+    height: 40vh;
+    overflow: scroll;
+  
+  }
+  .app::-webkit-scrollbar {
+    display: none;
+  }
+.card{
+    background-color: rgb(19, 13, 13);
+    min-height: 200px;
+    min-width: 200px;
+    border-radius: 12px;
+    margin-right: 2rem;
+}
+img{
+    border-radius: 50%;
+    margin-top: 6px;
+
+}
+h3{
+    color: blue;
+}
+p{
+    color: white;
+    text-decoration: transparent;
+}
+.button{
+    border: rgb(129, 24, 24);
+    size: 2px;
+    cursor: pointer;
+    text-align: center;
+}
