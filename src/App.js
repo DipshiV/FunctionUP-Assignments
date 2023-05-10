@@ -1,23 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Userdetails from './componets/UserData/UserDetail';
+import ScrollableCard from './componets/molecules/ScrollableCard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {Userdetails.map(user=>{ return ( <ScrollableCard key={user.key} Pic={user.UserPic} userName={user.UserName} Description={user.UserDescription} Exp={user.UserExperience}  />)})}
     </div>
   );
 }
