@@ -1,0 +1,32 @@
+.container{
+    margin:  40px 600px;
+   
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container button{
+    padding:10px;
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+    background-color: green;
+    border: ghostwhite;
+}
+ h1{
+    
+    color: green;
+   
+}
+h3{
+    color: red;
+}
+.btn button{
+    background-color: brown;
+    border-radius: 20px;
+    width: 150px;
+    margin: 20px;
+   
+}

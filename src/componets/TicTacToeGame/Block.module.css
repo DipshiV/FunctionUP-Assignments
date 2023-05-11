@@ -1,0 +1,9 @@
+.block{
+    border: 3px solid rgb(6, 125, 48); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 80px;
+
+}
