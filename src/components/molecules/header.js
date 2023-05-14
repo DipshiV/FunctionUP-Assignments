@@ -1,71 +1,45 @@
+
 import React, { useState } from "react";
 import "./header.css";
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaYoutubeSquare,
-} from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
+    const [showIcons, setShowIcons] = useState(false);
   return (
-    <>
-      <nav className="main-nav">
-        {/* 1st logo part  */}
-        <div className="logo">
-        <img src="https://www.freepnglogos.com/uploads/logo-internet-png/logo-internet-internet-world-grid-symbol-svg-png-icon-download-32.png" width='20px' />
-          <h2>
-            HMA
-          </h2>
-         
-        </div>
-
-        {/* 2nd menu part  */}
-     
-        <div
-          className={
-            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">about</Link>
-            </li>
-            <li>
-              <Link to="/service">services</Link>
-            </li>
-            <li>
-              <Link to="/contact">contact</Link>
-            </li>
-          </ul>
-        </div>
-       
-        {/* 3rd social media links */}
-        <div className="social-media">
-        <Link to="Login" >
-        <button className="button n-button">Login</button>
-        </Link>
-          {/* hamburget menu start  */}
-          <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
-            </a>
-          </div>
-        </div>
-      </nav>
-
-      {/* hero section  */}
-       <section className="hero-section">
-        <p>Welcome to </p>
-        <h1>Thapa Technical</h1>
-      </section> 
-    </>
-  );
+  
+      <nav className="navbar">    
+      <div className="logo">
+      <img src="https://www.freepnglogos.com/uploads/logo-internet-png/logo-internet-lithuania-brodynt-30.png" alt=""  width='20px' hight='20px'/>
+      <h2>HMA</h2></div>
+      <ul className={showIcons ? "nav-links-mobile" : "nav-links"} onClick={() => setShowIcons(false)}>
+      <Link to='/' className="home">
+      <li>Home</li>
+      </Link>
+      <Link to='/about' className="about">
+      <li>About</li>
+      </Link>
+      <Link to='/projects' className="project">
+      <li>Projects</li>
+      </Link>
+      <Link to='/vedios' className="vedios">
+      <li>Vedios</li>
+      </Link>
+      <Link to='/contact' className="contact">
+      <li>Contacts</li>
+      </Link>
+      <Link to='/login' className="login">
+      <li>Log in</li>
+      </Link>
+      </ul>
+      <button className="mobile-menu-icon" onClick={()=> setShowIcons(!showIcons)}>
+      {showIcons ?<GiHamburgerMenu/> :<GiHamburgerMenu/>}
+        </button>
+      </nav>   
+          
+      
+  )
 };
 
 export default Navbar;
