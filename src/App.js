@@ -1,6 +1,6 @@
 import Navbar from './components/molecules/header';
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -14,15 +14,15 @@ import Login from './components/Pages/Login';
 function App() {
   return (
     <div>
-    <BrowserRouter>
+    
     <Navbar/>
-   
+    <Routes>
    <Route  exact path='/' Component={Home}></Route>
    <Route exact path='/AboutUs' Component={AboutUs}></Route>
    <Route exact path='/Login' Component={Login}></Route>
    <Route exact path='/Register' Component={Register}></Route>
-    </BrowserRouter>
- 
+   
+   </Routes>
   </div>
     
   );
