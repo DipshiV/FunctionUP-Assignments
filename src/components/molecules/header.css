@@ -48,7 +48,12 @@ width: 75%;
 .mobile-menu-icon{
   display: none;
 }
+
 @media screen and (max-width:780px){
+  .navbar{
+    position: absolute;
+    width: 40rem;
+  }
   .logo{
     display: flex;
     position: absolute;
@@ -66,7 +71,7 @@ width: 75%;
     left: 0;
     top: 75px;
     transition: all 0.5s ease-out;
-    width: 100%;
+    width: 40rem;
   }
 .home,
 .about,
@@ -93,7 +98,60 @@ width: 75%;
   outline: none;
   top: 15px;
   right: 25px;
+ 
 }
   
 }
-
+@media (min-width: 400px) and (max-width: 768px) {
+ 
+  .navbar{
+    position: absolute;
+    
+  }
+  .logo{
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+  }
+  .nav-links{
+    display: none;
+  }
+  .nav-links-mobile{
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: rgb(8, 8, 108);
+    left: 0;
+    top: 75px;
+    transition: all 0.5s ease-out;
+    width: 40rem;
+  }
+.home,
+.about,
+.project,
+.vedios,
+.contact,
+.login{
+  color: white;
+  text-align: center;
+  padding: 32px;
+  width:100%;
+  transition:  all 0.5s ease;
+}
+.login{
+  border: none;
+}
+.mobile-menu-icon{
+  display: block;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  background-color: blue;
+  border: none;
+  outline: none;
+  top: 15px;
+  right: 25px;
+ 
+}
+}

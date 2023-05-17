@@ -1,22 +1,29 @@
 import Navbar from './components/molecules/header';
-import { Fragment } from 'react';
-import { BrowserRouter as Router ,Route, Switch,Routes } from 'react-router-dom';
-import HeroSection from './components/Pages/HeroSection';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
 import Home from './components/Pages/Home';
-import About from './components/Pages/About';
-import Contact from './components/Pages/Contact';
-import Project from './components/Pages/Projects';
-import Vedios from './components/Pages/Vedios';
+import AboutUs from './components/Pages/AboutUs';
+
+import Register from './components/Pages/Register'
+
 import Login from './components/Pages/Login';
 
 function App() {
   return (
-    <Fragment>
-    <Router><Navbar/></Router>
-  <HeroSection/>
-  </Fragment>
+    <div>
+    <BrowserRouter>
+    <Navbar/>
+   
+   <Route  exact path='/' Component={Home}></Route>
+   <Route exact path='/AboutUs' Component={AboutUs}></Route>
+   <Route exact path='/Login' Component={Login}></Route>
+   <Route exact path='/Register' Component={Register}></Route>
+    </BrowserRouter>
+ 
+  </div>
     
   );
 }

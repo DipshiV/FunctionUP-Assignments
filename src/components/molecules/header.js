@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import "./header.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCrossCircled } from "react-icons/rx";
+
 
 import { Link } from "react-router-dom";
 
@@ -17,24 +19,19 @@ const Navbar = () => {
       <Link to='/' className="home">
       <li>Home</li>
       </Link>
-      <Link to='/about' className="about">
-      <li>About</li>
+      <Link to='/AboutUs' className="login">
+      <li>AboutUs</li>
       </Link>
-      <Link to='/projects' className="project">
-      <li>Projects</li>
+      <Link to='/Login' className="login">
+      <li>Login</li>
       </Link>
-      <Link to='/vedios' className="vedios">
-      <li>Vedios</li>
+      <Link to='/Register' className="login">
+      <li>Register</li>
       </Link>
-      <Link to='/contact' className="contact">
-      <li>Contacts</li>
-      </Link>
-      <Link to='/login' className="login">
-      <li>Log in</li>
-      </Link>
+     
       </ul>
       <button className="mobile-menu-icon" onClick={()=> setShowIcons(!showIcons)}>
-      {showIcons ?<GiHamburgerMenu/> :<GiHamburgerMenu/>}
+      {showIcons ?<RxCrossCircled/> :<GiHamburgerMenu/>}
         </button>
       </nav>   
           
