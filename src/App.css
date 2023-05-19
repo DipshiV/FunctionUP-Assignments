@@ -36,6 +36,14 @@ body{
   text-align: center;  
   text-transform: uppercase;
 }
+.text{
+  color:white;
+  font-size: 10px;
+  margin: 10px;
+  text-align: center;  
+  font-weight: 700px;
+ 
+}
 .question{
   margin:8px;
   box-shadow: 0px 0px 10px 1px #a2a3a3;
@@ -100,6 +108,22 @@ body{
   position: absolute;
   bottom: 15px;
 }
+#next-btn{
+  box-shadow: 3px 3px 2px 1px rgb(127, 109, 109);
+  font-size: larger;
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: 0.2s;
+  padding: 8px;
+  background-color: rgb(128, 0, 0);
+  background-color: #8562ed;
+  color:white;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 15px;
+  border:none;
+
+}
 #next-button:active{
   box-shadow:none;    
 }
@@ -108,4 +132,14 @@ body{
   top:30%;
   font-size: 40px;
   text-align: center;  
+}
+#greet{
+  text-align: center;
+  color:green;
+  position: absolute;
+  top:40%;
+  
+}
+#failed{
+ color: red;
 }
