@@ -1,0 +1,30 @@
+.wrapper{
+background-color: white;
+width: 100%;
+border-radius: 20px;
+height: 2.5rem;
+padding: 0 15px;
+box-shadow: 0px 0px 8px #ddd;
+display: flex;
+align-items: center;
+}
+.wrapper input{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    margin-left: 5px;
+    font-size: 1.25rem;
+   width: 100%;
+}
+input:focus{
+    outline: none;
+}
+#icon{
+
+font-size: 2rem;
+}
+#voice{
+   margin-left: 300px;
+   color: blue;
+   font-size: 3rem;
+}

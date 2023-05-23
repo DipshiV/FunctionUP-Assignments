@@ -1,0 +1,6 @@
+.result{
+    padding: 10px 20px;
+}
+.result:hover{
+    background-color: rgb(216, 213, 213);
+}
