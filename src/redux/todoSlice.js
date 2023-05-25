@@ -12,7 +12,7 @@ export const todoSlice = createSlice({
             const todo = {
                 id: new Date(),
                 name: action.payload.name,
-                status: false,
+                status: 'Pending',
             };
             state.push(todo);
         },
