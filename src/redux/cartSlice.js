@@ -6,10 +6,16 @@ const cartSlice=createSlice({
     initialState,
     reducers:{
         add(state,action){
+            const key=state.find((elem)=>elem.imdbID === action.payload.imdbID)
+            if(!key){
             state.push(action.payload)
+            }
+            else{
+                alert("data is added");
+            }
         },
         remove(state, action){
-            return state.filter((item)=> item.id !== action.payload.id);
+            return state.filter((item)=> item.imdbID !== action.payload.imdbID);
         },
     }
 
