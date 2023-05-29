@@ -1,10 +1,6 @@
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
 
-export const STATUSES = Object.freeze({
-    IDLE: 'idle',
-    ERROR: 'error',
-    LOADING: 'loading',
-});
+
 
 const movieSlice = createSlice({
     initialState: {
